@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #cceeff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Start Screen */
+#startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#startScreen h1 {
+  font-size: 48px;
+}
+
+#startScreen p {
+  font-size: 18px;
+  color: #444;
+}
+
+.controls-hint {
+  font-size: 14px !important;
+  color: #888 !important;
+}
+
+/* HUD */
+#hud {
+  display: none;
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  width: 800px;
+  border-radius: 8px 8px 0 0;
+  display: none;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Game Area */
+#game {
+  width: 800px;
+  height: 450px;
+  background: #fff4cc;
+  border: 3px solid #333;
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+
+/* Entities */
+#player, #cheese, .cat {
+  position: absolute;
+  font-size: 36px;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.1s;
+}
+
+/* Game Over */
+#gameOver {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#gameOver h2 {
+  font-size: 42px;
+}
+
+#gameOver p {
+  font-size: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 28px;
+  font-size: 16px;
+  background: orange;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #e69500;
+}
+
+/* Flash overlays */
+#game.flash-hit {
+  background: #ffaaaa !important;
+}
+
+#game.flash-cheese {
+  background: #ccffcc !important;
+}

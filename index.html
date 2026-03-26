@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cheese Chase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="startScreen">
+    <h1>🐭 Cheese Chase 🧀</h1>
+    <p>Collect cheese and avoid cats!</p>
+    <p class="controls-hint">Use arrow keys to move</p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="hud">
+    <span>Score: <span id="score">0</span></span>
+    <span>Lives: <span id="lives">❤️❤️❤️</span></span>
+    <span>Time: <span id="time">60</span>s</span>
+    <span>Level: <span id="level">1</span></span>
+  </div>
+
+  <div id="game">
+    <div id="player">🐭</div>
+    <div id="cheese">🧀</div>
+  </div>
+
+  <div id="gameOver">
+    <h2>Game Over</h2>
+    <p>Final Score: <span id="finalScore"></span></p>
+    <button onclick="location.reload()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
